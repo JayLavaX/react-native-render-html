@@ -117,6 +117,7 @@ export function iframe (htmlAttribs, children, convertedCSSStyles, passProps) {
         return false;
     }
     const { staticContentMaxWidth, tagsStyles, classesStyles } = passProps;
+    //console.log('tags', tagsStyles);
 
     const tagStyleHeight = tagsStyles.iframe && tagsStyles.iframe.height;
     const tagStyleWidth = tagsStyles.iframe && tagsStyles.iframe.width;
@@ -138,6 +139,7 @@ export function iframe (htmlAttribs, children, convertedCSSStyles, passProps) {
         styleSet: 'VIEW',
         additionalStyles: [{ height, width }]
     });
+    //console.log('style', style);
 
     return (
         <WebView key={passProps.key} source={{ uri: htmlAttribs.src }} style={style} />
